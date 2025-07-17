@@ -6,12 +6,16 @@
     font-style: normal;
 }
 
+header{
+    margin-bottom: 90px;
+    padding-bottom: 30px;
+}
 
 .flexing-display {
     display: flex;
 }
 
-.navbar {
+.navbar , .feature-section {
     justify-content: space-between;
     align-items: center;
 }
@@ -61,12 +65,14 @@
 }
 
 .navbar,
-.banner {
+.banner,
+main {
     max-width: 1440px;
     margin: 0 auto;
 }
 
 /* banner related styles */
+
 .banner-title {
     font-weight: 700;
     font-size: 4rem;
@@ -92,17 +98,53 @@
 .banner-img {
     width: 100%;
 }
+/* feature part */
+.feature-section{
+    margin-right: 70px;
+}
+.feature-photo{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 24px;
+}
 
+.feature-content{
+    max-width: 540px;
+}
+.feature-title{
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+.feature-des{
+    margin-bottom: 32px;
+}
 
 @media screen and (max-width : 576px) {
-
+    .full-body{
+        margin: 0 auto;
+    }
+    
     .navbar,
     .banner {
         margin: 0 auto;
     }
 
-    .navbar {
+    .navbar , .feature-section{
         flex-direction: column;
+    }
+    .feature-section{
+        margin: 0 auto;
+    }
+    .feature-photo{
+        display: grid;
+        grid-template-columns: repeat(1 , 1fr);
+    }
+    .feature-content{
+        text-align: center;
+    }
+    .banner-details, 
+    .feature-des {
+        padding: 20px;
     }
     
 }
