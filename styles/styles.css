@@ -6,7 +6,7 @@
     font-style: normal;
 }
 
-header{
+header {
     margin-bottom: 90px;
     padding-bottom: 30px;
 }
@@ -15,7 +15,8 @@ header{
     display: flex;
 }
 
-.navbar , .feature-section {
+.navbar,
+.feature-section {
     justify-content: space-between;
     align-items: center;
 }
@@ -98,53 +99,114 @@ main {
 .banner-img {
     width: 100%;
 }
+
 /* feature part */
-.feature-section{
+.feature-section {
     margin-right: 70px;
 }
-.feature-photo{
+
+.feature-photo {
     display: grid;
-    grid-template-columns: repeat(2 , 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 }
 
-.feature-content{
+.feature-content {
     max-width: 540px;
 }
-.feature-title{
+
+.feature-title {
     font-weight: 700;
     font-size: 2.5rem;
 }
-.feature-des{
+
+.feature-des {
     margin-bottom: 32px;
 }
 
+/* all style about fact */
+
+.fact-head {
+    margin-top: 100px;
+}
+
+.fact-container {
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 110px;
+    margin-top: 80px;
+    justify-content: center;
+    padding: 0 50px;
+}
+
+.fact-card {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(255, 144, 14, 1);
+    border-radius: 8px;
+    padding: 25px 25px;
+    /* width: 240px;
+    height: 240px; */
+}
+
+.fact-no {
+    font-size: 2.7rem;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.fact-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+
+
 @media screen and (max-width : 576px) {
-    .full-body{
-        margin: 0 auto;
-    }
-    
-    .navbar,
-    .banner {
+    .full-body {
         margin: 0 auto;
     }
 
-    .navbar , .feature-section{
-        flex-direction: column;
-    }
-    .feature-section{
+    .navbar,
+    .banner,
+    .fact-section {
         margin: 0 auto;
     }
-    .feature-photo{
-        display: grid;
-        grid-template-columns: repeat(1 , 1fr);
+
+    .navbar,
+    .feature-section {
+        flex-direction: column;
     }
-    .feature-content{
+
+    .feature-section {
+        margin: 0 auto;
+    }
+
+    .feature-photo , 
+    .fact-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .feature-content {
         text-align: center;
     }
-    .banner-details, 
+
+    .banner-details,
     .feature-des {
-        padding: 20px;
+        padding: 40px;
     }
-    
+
+    .fact-container{
+        gap:30px ;
+        margin-top: 10px;
+    }
+    .fact-details{
+        padding: 30px;
+        margin-bottom: 10px;
+    }
+
 }
